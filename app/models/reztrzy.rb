@@ -1,0 +1,2 @@
+class Reztrzy < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class Rezcztery < ApplicationRecord
+end

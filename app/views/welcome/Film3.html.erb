@@ -1,0 +1,144 @@
+<style>
+
+* {
+    margin: 0;
+}
+h1 {
+    padding-top:  15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    background-color: #000072;
+    color: white;
+ 
+}
+h2 {
+    padding-left: 10px;
+    padding-bottom: 20px;
+    color: white;
+    background-color: Black;
+}
+
+h3 {
+    font-size: 26px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+}
+
+#logowanie {
+    float: right;
+}
+
+#img1 {
+    width: 18%;
+    padding-right: 10px;
+    float: left;
+    background-color: Black;
+}
+
+#text1 {
+    width: 100%;
+    font-weight: bold;
+}
+
+#info1 {
+    font-weight: bold;
+}
+
+#strona {
+    margin-left: 5px;
+    height:  700px;
+    background-color: Black;
+    color: white;
+}
+#Gora {
+    background-color: Black;
+}
+#menu{
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #000000;
+}
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+    }
+
+#menu li {
+    float: left;
+}
+
+#menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+    /* Change the link color to #111 (black) on hover */
+#menu li a:hover {
+    background-color: Orange;
+}
+#Dol {
+    padding-left: 20px;
+    padding-top: 20px;
+    background-color: Black;
+}
+</style>
+
+<div id="strona">
+	<div id="Gora">
+	<h1>Cinema</h1>
+
+		<div id="menu">
+	        <ul>
+	        <li><a class="active" href="index.html">Strona Główna</a></li>
+			<li><a href="Cennik.html">Cennik</a></li>
+	        <li><a href="Kontakt.html">Kontakt</a></li>
+	        <li><%= link_to 'Forum', controller: 'forums' %></li>
+	        </ul>
+					
+	    </div>
+        <div id="logowanie">
+                <a href="http://localhost:3000/usrs/new"><input type="submit" name="" value="Zarejestruj" id="open-contacts-dialog-btn" class="inbox-sf-add-btn tip" title="Open an dialog to add a new contact"/></a>
+                <% if session[:user_id] %>
+                <%= button_to 'Wyloguj    ', logout_path, method: :delete %>
+                <% end %>
+                <a href="http://localhost:3000/login"><input type="submit" name="" value="Zaloguj     " id="open-contacts-dialog-btn" class="inbox-sf-add-btn tip" title="Open an dialog to add a new contact"/></a>
+                
+        </div>
+	</div>
+	<div id="Dol">
+		<div id="text1">
+			<h3>Narzeczony na niby</h3>
+			<br>
+			Czy małe, niewinne kłamstewko może wymknąć się spod kontroli i doprowadzić do totalnej katastrofy? A może dopiero jak wszystko się w życiu rozpada, możliwe staje się poukładanie wszystkiego od nowa? Karina próbuje z całych sił stworzyć pierwszy (tym razem) szczęśliwy związek. Niestety mężczyzna, któremu oddała swoje serce, wydaje się być bardziej zainteresowany sobą, niż nią. Pewnego dnia, jedno nieprzewidziane zdarzenie i jedno małe kłamstewko zamieni jej uporządkowane życie w prawdziwy emocjonalny rollercoster. Szybko okaże się też, że każdy z bohaterów ma tak naprawdę coś do ukrycia. Gdy prawda wyjdzie na jaw, wszyscy będą musieli zrobić w końcu porządek w swoich związkach i w swoich sercach. „Narzeczonego na niby” pokochają ci, którzy choć raz zakochali się w niewłaściwej osobie oraz ci, którzy wierzą, że o prawdziwą miłość warto walczyć, nawet jeśli zaczyna się mocno niefortunnie.
+		</div>
+        <br>
+        
+        <a href="http://localhost:3000/rezdwas"><input type="submit" name="" value="Rezerwuj" height="100" width="200" id="open-contacts-dialog-btn" class="inbox-sf-add-btn tip" title="Open an dialog to add a new contact"/></a>
+        
+        <br>
+		<div id="info1">
+			<br><br>
+			TYTUŁ ORYGINALNY: Narzeczony na niby 2D
+			<br><br>
+			GATUNEK FILMU: Romantyczny, Komedia
+			<br><br>
+			OBSADA: Julia Kamińska, Piotr Stramowski, Sonia Bohosiewicz, Piotr Adamczyk, Barbara Kurdej-Szatan, Tomasz Karolak, Dorota Kolak
+			<br><br>
+			REŻYSER:		Bartosz Prokopowicz
+			<br><br>
+			PRODUKCJA: Polska 2018
+			<br><br>
+			OGRANICZENIA WIEKOWE: 12+
+			<br><br>
+			CZAS TRWANIA: 112 min.
+		</div>
+	</div>
+</div>

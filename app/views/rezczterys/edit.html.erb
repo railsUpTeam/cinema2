@@ -1,0 +1,128 @@
+<style>
+
+* {
+    margin: 0;
+}
+h1 {
+    padding-top:  15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    background-color: #000072;
+    color: white;
+ 
+}
+h2 {
+    padding-left: 10px;
+    padding-bottom: 20px;
+    color: white;
+    background-color: Black;
+}
+
+h3 {
+    font-size: 26px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+}
+
+#logowanie {
+    float: right;
+}
+
+#img1 {
+    width: 18%;
+    padding-right: 10px;
+    float: left;
+    background-color: Black;
+}
+
+#text1 {
+    width: 100%;
+    font-weight: bold;
+}
+
+#info1 {
+    font-weight: bold;
+}
+
+#strona {
+    margin-left: 5px;
+    height:  700px;
+    background-color: Black;
+    color: white;
+}
+#Gora {
+    background-color: Black;
+}
+#menu{
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #000000;
+}
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+    }
+
+#menu li {
+    float: left;
+}
+
+#menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+    /* Change the link color to #111 (black) on hover */
+#menu li a:hover {
+    background-color: Orange;
+}
+#Dol {
+    padding-left: 20px;
+    padding-top: 20px;
+    background-color: Black;
+}
+</style>
+<div id="Dol"> 
+<h1>Edit rezcztery</h1>
+ 
+<%= form_with(model: @rezcztery) do |form| %>
+ 
+  <% if @rezcztery.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@rezcztery.errors.count, "error") %> prohibited
+        this rezcztery from being saved:
+      </h2>
+      <ul>
+        <% @rezcztery.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= form.label :Miejsce %><br>
+    <%= @rezcztery.title %>
+  </p>
+ 
+  <p>
+    <%= form.select :text, options_for_select([["Rezerwuj", "r"], ["Zwolnij", "s"]]) %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>
+ 
+<%= link_to 'Back', rezczterys_path %>
+</div>

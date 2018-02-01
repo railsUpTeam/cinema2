@@ -1,0 +1,2 @@
+class Rezdwa < ApplicationRecord
+end

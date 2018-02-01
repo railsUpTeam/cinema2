@@ -1,0 +1,158 @@
+<style>
+
+* {
+    margin: 0;
+}
+h1 {
+    padding-top:  15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    background-color: #000072;
+    color: white;
+ 
+}
+h2 {
+    padding-left: 10px;
+    padding-bottom: 20px;
+    color: white;
+    background-color: Black;
+}
+
+h3 {
+    font-size: 26px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+}
+
+#logowanie {
+    float: right;
+}
+
+#img1 {
+    width: 18%;
+    padding-right: 10px;
+    float: left;
+    background-color: Black;
+}
+
+#text1 {
+    width: 100%;
+    font-weight: bold;
+}
+
+#info1 {
+    font-weight: bold;
+}
+
+#strona {
+    margin-left: 5px;
+    height:  700px;
+    background-color: Black;
+    color: white;
+}
+#Gora {
+    background-color: Black;
+}
+#menu{
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #000000;
+}
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+    }
+
+#menu li {
+    float: left;
+}
+
+#menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+    /* Change the link color to #111 (black) on hover */
+#menu li a:hover {
+    background-color: Orange;
+}
+#Dol {
+    padding-left: 20px;
+    padding-top: 20px;
+    background-color: Black;
+}
+</style>
+
+<div id="strona">
+    <div id="Gora">
+        <h1>Cinema</h1>
+
+	   <div id="menu">
+            <ul>
+            <li><a href="index.html">Strona Główna</a></li>
+    		<li><a href="Cennik.html">Cennik</a></li>
+            <li><a class="active" href="Kontakt.html">Kontakt</a></li>
+            <li><%= link_to 'Forum', controller: 'forums' %></li>
+            </ul>	
+        </div>
+        <div id="logowanie">
+                <a href="http://localhost:3000/usrs/new"><input type="submit" name="" value="Zarejestruj" id="open-contacts-dialog-btn" class="inbox-sf-add-btn tip" title="Open an dialog to add a new contact"/></a>
+                <% if session[:user_id] %>
+                <%= button_to 'Wyloguj    ', logout_path, method: :delete %>
+                <% end %>
+                <a href="http://localhost:3000/login"><input type="submit" name="" value="Zaloguj     " id="open-contacts-dialog-btn" class="inbox-sf-add-btn tip" title="Open an dialog to add a new contact"/></a>
+                
+        </div>
+    </div>
+
+
+<div id="Dol">
+
+    <h3>Adres placówki</h3>
+    Cinema sp. z o.o.
+    <br>
+    ul.Wysłouchów 40
+    <br>
+    30-611 Kraków
+    <br>
+    <br>
+    e-mail: kontakt@kino.pl
+    <br>
+    tel.: 609323413
+    <br>
+    fax: 609323413
+    <br>
+    <br>
+    NIP: 3999548621
+    <br>
+
+    <h3>Dyrektor Zarządzający</h3>
+    Michał Rogowiec
+    <br>
+    tel.: 609323413<br>
+    e-mail: michal.rogowiec@kino.pl
+    <br>
+
+    <h3>Dyrektor ds. Badań i Analiz</h3>
+    Jakub Mirek
+    <br>
+    tel.:
+    <br>
+    e-mail: jakub.mirek@kino.pl
+    <br>
+    <h3>Dyrektor Sprzedaży</h3>
+    Mateusz Syrek
+    <br>
+    tel.:
+    <br>
+    e-mail: mateusz.syrek@kino.pl
+</div>
+</div>

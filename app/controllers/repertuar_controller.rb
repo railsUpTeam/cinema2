@@ -1,0 +1,2 @@
+class RepertuarController < ApplicationController
+end

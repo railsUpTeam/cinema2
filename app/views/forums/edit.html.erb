@@ -1,0 +1,37 @@
+
+<h1>Edit forum</h1>
+ 
+<%= form_with(model: @forum) do |form| %>
+ 
+  <% if @forum.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@forum.errors.count, "error") %> prohibited
+        this forum from being saved:
+      </h2>
+      <ul>
+        <% @forum.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+  <p>
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </p>
+ 
+  <p>
+    <%= form.label :text %><br>
+   
+    <%= form.select :text, options_for_select([["Rezerwuj", "d"], ["Zwolnij", "s"]]) %>
+  </p>
+ 
+  <p>
+    <%= form.submit %>
+  </p>
+ 
+<% end %>
+ 
+<%= link_to 'Back', forums_path %>

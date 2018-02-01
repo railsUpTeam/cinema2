@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Imie:</strong>
+  <%= @usr.Imie %>
+</p>
+
+<p>
+  <strong>Nazwisko:</strong>
+  <%= @usr.nazwisko %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @usr.email %>
+</p>
+
+<%= link_to 'Edit', edit_usr_path(@usr) %> |
+<%= link_to 'Back', usrs_path %>

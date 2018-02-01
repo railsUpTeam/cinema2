@@ -1,0 +1,144 @@
+<style>
+
+* {
+    margin: 0;
+}
+h1 {
+    padding-top:  15px;
+    padding-bottom: 15px;
+    padding-left: 25px;
+    background-color: #000072;
+    color: white;
+ 
+}
+h2 {
+    padding-left: 10px;
+    padding-bottom: 20px;
+    color: white;
+    background-color: Black;
+}
+
+h3 {
+    font-size: 26px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: white;
+}
+
+#logowanie {
+    float: right;
+}
+
+#img1 {
+    width: 18%;
+    padding-right: 10px;
+    float: left;
+    background-color: Black;
+}
+
+#text1 {
+    width: 100%;
+    font-weight: bold;
+}
+
+#info1 {
+    font-weight: bold;
+}
+
+#strona {
+    margin-left: 5px;
+    height:  700px;
+    background-color: Black;
+    color: white;
+}
+#Gora {
+    background-color: Black;
+}
+#menu{
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #000000;
+}
+#menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #000000;
+    }
+
+#menu li {
+    float: left;
+}
+
+#menu li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+    /* Change the link color to #111 (black) on hover */
+#menu li a:hover {
+    background-color: Orange;
+}
+#Dol {
+    padding-left: 20px;
+    padding-top: 20px;
+    background-color: Black;
+}
+</style>
+
+<div id="strona">
+	<div id="Gora">
+	<h1>Cinema</h1>
+
+		<div id="menu">
+	        <ul>
+	        <li><a class="active" href="index.html">Strona Główna</a></li>
+			<li><a href="Cennik.html">Cennik</a></li>
+	        <li><a href="Kontakt.html">Kontakt</a></li>
+	        <li><%= link_to 'Forum', controller: 'forums' %></li>
+	        </ul>
+					
+	    </div>
+        <div id="logowanie">
+                <a href="http://localhost:3000/usrs/new"><input type="submit" name="" value="Zarejestruj" id="open-contacts-dialog-btn" class="inbox-sf-add-btn tip" title="Open an dialog to add a new contact"/></a>
+                <% if session[:user_id] %>
+                <%= button_to 'Wyloguj    ', logout_path, method: :delete %>
+                <% end %>
+                <a href="http://localhost:3000/login"><input type="submit" name="" value="Zaloguj     " id="open-contacts-dialog-btn" class="inbox-sf-add-btn tip" title="Open an dialog to add a new contact"/></a>
+                
+        </div>
+	</div>
+	<div id="Dol">
+		<div id="text1">
+			<h3>Pasażer</h3>
+			<br>
+			Bohater kina akcji, Liam Neeson, powraca w trzymającym w napięciu od pierwszej do ostatniej minuty thrillerze w reżyserii mistrza gatunku – Jaume’a Collet-Serra. „Pasażer” – nowe dzieło twórcy przebojów „183 metry strachu” i „Non stop” to pełne gwiazd kino sensacyjne, o szybkości i mocy rozpędzonego pociągu. Historia zwykłego człowieka, uwikłanego w zabójczy spisek, od którego decyzji zależeć będzie życie wielu niewinnych osób. W obsadzie produkcji, obok Neesona, m.in.: Vera Farmiga i Patrick Wilson – niezapomniana para egzorcystów z hitów „Obecność 1 i 2”, Sam Neill („Park Jurajski”) oraz Jonathan Banks, czyli zabójczy Mike Ehrmantraut z kultowych seriali „Zadzwoń do Saula” i „Breaking Bad”. Dla agenta ubezpieczeniowego Michaela Woolricha każdy dzień wygląda tak samo – praca i powrót pociągiem do domu. Wszystko zmienia się, gdy w czasie jednej z podróży poznaje tajemniczą kobietę. Nieznajoma, która wydaje się wiedzieć o Michaelu dosłownie wszystko, zleca mu niezwykłe zadanie. Zanim pociąg dotrze do celu, mężczyzna ma zlokalizować i wskazać osobę, która tego dnia nie powinna się w nim znajdować. Jeśli tego nie zrobi, ucierpi zarówno on sam, jego rodzina, jak i pozostali współpasażerowie. Nie mając wyboru, Michael postanawia rozwiązać zagadkę. Z każdą minutą i przebytym kilometrem stawka rośnie, a mężczyzna przekonuje się, że stał się pionkiem w szalenie niebezpiecznej intrydze.
+		</div>
+        <br>
+        
+        <a href="http://localhost:3000/rezjedens"><input type="submit" name="" value="Rezerwuj" height="100" width="200" id="open-contacts-dialog-btn" class="inbox-sf-add-btn tip" title="Open an dialog to add a new contact"/></a>
+        
+        <br>
+		<div id="info1">
+			<br><br>
+			TYTUŁ ORYGINALNY: The Commuter 2D
+			<br><br>
+			GATUNEK FILMU: Akcja, Thriller
+			<br><br>
+			OBSADA: Liam Neeson, Vera Farmiga, Patrick Wilson
+			<br><br>
+			REŻYSER:		Jaume Collet-Serra
+			<br><br>
+			PRODUKCJA: USA 2017
+			<br><br>
+			OGRANICZENIA WIEKOWE: 15+
+			<br><br>
+			CZAS TRWANIA: 106 min.
+		</div>
+	</div>
+</div>
